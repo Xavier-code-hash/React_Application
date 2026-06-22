@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Product
+from .models import Product, Order, Expense
 from django.contrib.auth.models import User
 
 
@@ -29,7 +29,7 @@ class RegisterSerializer(serializers.Serializer):
     password = validated_data['password']
 
     user = User.objects.create_user(
-      username=full_name,
+      username=email,
       email=email,
       password=password,
       first_name=full_name,
@@ -46,3 +46,41 @@ class ProductSerializer(serializers.ModelSerializer):
     model = Product
     fields = '__all__'
     read_only_fields = ['id', 'created_at']
+
+
+class OrderSerializer(serializers.ModelSerializer):
+  product_name = serializers.CharField(source='product.name', read_only=True)
+
+  class Meta:
+    model = Order
+    fields = [
+      'id',
+      'product',
+      'product_name',
+      'quantity',
+      'customer_name',
+      'customer_email',
+      'total_price',
+      'status',
+      'created_at',
+      'updated_at',
+    ]
+    read_only_fields = ['id', 'total_price', 'created_at', 'updated_at']
+
+
+class ExpenseSerializer(serializers.ModelSerializer):
+  related_order_id = serializers.IntegerField(source='related_order.id', read_only=True)
+
+  class Meta:
+    model = Expense
+    fields = [
+      'id',
+      'title',
+      'category',
+      'amount',
+      'description',
+      'related_order',
+      'related_order_id',
+      'created_at',
+    ]
+    read_only_fields = ['id', 'created_at', 'related_order_id']

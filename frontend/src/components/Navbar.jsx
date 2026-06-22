@@ -40,10 +40,31 @@ function Navbar({ user, setUser }) {
           </Link>
 
           <Link
-            className="btn btn-warning"
+            className="btn btn-warning me-2"
             to="/add-product"
           >
             Add Product
+          </Link>
+
+          <Link
+            className="btn btn-success me-2"
+            to="/orders"
+          >
+            Orders
+          </Link>
+
+          <Link
+            className="btn btn-info me-2"
+            to="/expenses"
+          >
+            Expenses
+          </Link>
+
+          <Link
+            className="btn btn-secondary"
+            to="/dashboard"
+          >
+            Dashboard
           </Link>
 
           {user ? (

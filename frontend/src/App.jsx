@@ -10,6 +10,9 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import AddProduct from "./pages/AddProduct";
 import EditProduct from "./pages/EditProduct";
+import Orders from "./pages/Orders";
+import Expenses from "./pages/Expenses";
+import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import { useEffect, useState } from "react";
@@ -62,6 +65,18 @@ function App() {
         <Route
           path="/edit-product/:id"
           element={<EditProduct />}
+        />
+        <Route
+          path="/orders"
+          element={<Orders />}
+        />
+        <Route
+          path="/expenses"
+          element={<Expenses />}
+        />
+        <Route
+          path="/dashboard"
+          element={<Dashboard />}
         />
 
       </Routes>
