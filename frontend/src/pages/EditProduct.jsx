@@ -75,11 +75,11 @@ function EditProduct() {
     return (
         <div className="container mt-5">
 
-            <div className="card shadow">
+            <div className="card section-card">
 
                 <div className="card-body">
 
-                    <h2 className="mb-4">
+                    <h2 className="page-title">
                         Edit Product
                     </h2>
 

@@ -19,9 +19,9 @@ function Navbar({ user, setUser }) {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary py-3">
 
-      <div className="container">
+      <div className="container d-flex flex-wrap align-items-center justify-content-between">
 
         <Link
           className="navbar-brand fw-bold"
@@ -30,10 +30,10 @@ function Navbar({ user, setUser }) {
           Product Store
         </Link>
 
-        <div>
+        <div className="d-flex flex-wrap gap-2 align-items-center">
 
           <Link
-            className="btn btn-light me-2"
+            className="btn btn-light"
             to="/"
           >
             Home

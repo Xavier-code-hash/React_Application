@@ -64,11 +64,11 @@ function AddProduct() {
 
     <div className="container mt-5">
 
-      <div className="card shadow">
+      <div className="card section-card">
 
         <div className="card-body">
 
-          <h2>Add Product</h2>
+          <h2 className="page-title">Add Product</h2>
 
           <form onSubmit={saveProduct}>
 

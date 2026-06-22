@@ -63,13 +63,13 @@ function Orders() {
 
   return (
     <div className="container mt-5">
-      <h2 className="mb-4">Orders and Tracking</h2>
+      <h2 className="page-title">Orders and Tracking</h2>
 
       <div className="row">
         <div className="col-lg-5 mb-4">
-          <div className="card shadow">
+          <div className="card section-card">
             <div className="card-body">
-              <h5>Create Order</h5>
+              <h5 className="mb-4">Create Order</h5>
               <form onSubmit={createOrder}>
                 <div className="mb-3">
                   <label className="form-label">Product</label>
@@ -135,9 +135,9 @@ function Orders() {
         </div>
 
         <div className="col-lg-7">
-          <div className="card shadow">
+          <div className="card section-card">
             <div className="card-body">
-              <h5>Order History</h5>
+              <h5 className="mb-4">Order History</h5>
               {orders.length === 0 ? (
                 <p>No orders found yet.</p>
               ) : (

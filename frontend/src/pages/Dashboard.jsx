@@ -29,7 +29,7 @@ function Dashboard() {
 
   return (
     <div className="container mt-5">
-      <h2 className="mb-4">Business Dashboard</h2>
+      <h2 className="page-title">Business Dashboard</h2>
       <div className="row g-3">
         <div className="col-md-4">
           <div className="card shadow-sm p-3">

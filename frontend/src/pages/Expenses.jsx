@@ -65,13 +65,13 @@ function Expenses() {
 
   return (
     <div className="container mt-5">
-      <h2 className="mb-4">Expense Tracker</h2>
+      <h2 className="page-title">Expense Tracker</h2>
 
       <div className="row">
         <div className="col-lg-5 mb-4">
-          <div className="card shadow">
+          <div className="card section-card">
             <div className="card-body">
-              <h5>New Expense</h5>
+              <h5 className="mb-4">New Expense</h5>
               <form onSubmit={createExpense}>
                 <div className="mb-3">
                   <label className="form-label">Title</label>
@@ -150,9 +150,9 @@ function Expenses() {
         </div>
 
         <div className="col-lg-7">
-          <div className="card shadow">
+          <div className="card section-card">
             <div className="card-body">
-              <h5>Expense History</h5>
+              <h5 className="mb-4">Expense History</h5>
               {expenses.length === 0 ? (
                 <p>No expenses recorded yet.</p>
               ) : (
